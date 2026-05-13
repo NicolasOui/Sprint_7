@@ -23,7 +23,7 @@
    mvn test
    ```
 2. Для генерации и просмотра Allure-отчета выполнить:
-      ```bash
+```bash
    mvn allure:serve
    ```
 
