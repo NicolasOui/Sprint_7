@@ -1,3 +1,5 @@
+package ru.praktikum.scooter.model;
+
 public class CreateCourier {
 
         private String login;

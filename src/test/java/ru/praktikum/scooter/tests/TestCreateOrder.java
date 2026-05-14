@@ -1,4 +1,9 @@
+package ru.praktikum.scooter.tests;
+
 import org.junit.Test;
+import ru.praktikum.scooter.api.OrderSteps;
+import ru.praktikum.scooter.model.CreateOrder;
+
 import java.util.List;
 import static org.hamcrest.CoreMatchers.notNullValue;
 

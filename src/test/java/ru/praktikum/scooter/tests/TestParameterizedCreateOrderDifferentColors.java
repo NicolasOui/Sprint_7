@@ -1,6 +1,11 @@
+package ru.praktikum.scooter.tests;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import ru.praktikum.scooter.api.OrderSteps;
+import ru.praktikum.scooter.model.CreateOrder;
+
 import java.util.List;
 
 @RunWith(Parameterized.class)

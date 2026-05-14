@@ -1,3 +1,5 @@
+package ru.praktikum.scooter.model;
+
 import java.util.List;
 
 public class CreateOrder {

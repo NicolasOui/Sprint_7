@@ -1,7 +1,13 @@
+package ru.praktikum.scooter.tests;
+
 import org.junit.Test;
+import ru.praktikum.scooter.api.CourierSteps;
+import ru.praktikum.scooter.model.CreateCourier;
+import ru.praktikum.scooter.model.LoginCourier;
+
 import static org.hamcrest.Matchers.equalTo;
 
-public class TestCreateCourier extends BaseTest  {
+public class TestCreateCourier extends BaseTest {
 
     private final CourierSteps steps = new CourierSteps();
 

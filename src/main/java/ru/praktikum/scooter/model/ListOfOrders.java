@@ -1,3 +1,5 @@
+package ru.praktikum.scooter.model;
+
 public class ListOfOrders {
 
     private int courierId;

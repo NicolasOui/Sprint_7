@@ -1,5 +1,9 @@
+package ru.praktikum.scooter.api;
+
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
+import ru.praktikum.scooter.model.CreateOrder;
+
 import static io.restassured.RestAssured.given;
 
 public class OrderSteps {

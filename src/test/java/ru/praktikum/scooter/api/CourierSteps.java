@@ -1,5 +1,11 @@
+package ru.praktikum.scooter.api;
+
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
+import ru.praktikum.scooter.model.CreateCourier;
+import ru.praktikum.scooter.model.DeleteCourier;
+import ru.praktikum.scooter.model.LoginCourier;
+
 import static io.restassured.RestAssured.given;
 
 public class CourierSteps {

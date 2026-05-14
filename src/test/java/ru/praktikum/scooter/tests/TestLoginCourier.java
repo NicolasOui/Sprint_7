@@ -1,4 +1,10 @@
+package ru.praktikum.scooter.tests;
+
 import org.junit.Test;
+import ru.praktikum.scooter.api.CourierSteps;
+import ru.praktikum.scooter.model.CreateCourier;
+import ru.praktikum.scooter.model.LoginCourier;
+
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.Matchers.equalTo;
 
