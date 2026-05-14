@@ -1,3 +1,5 @@
+package ru.praktikum.scooter.tests;
+
 import org.junit.After;
 import ru.praktikum.scooter.api.CourierSteps;
 import ru.praktikum.scooter.api.OrderSteps;
