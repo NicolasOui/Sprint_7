@@ -40,7 +40,7 @@ public class TestCreateCourier extends BaseTest {
         steps.create(courier)
                 .then()
                 .statusCode(SC_CONFLICT)
-                .body("message", equalTo("Этот логин уже используется"));
+                .body("message", equalTo("Этот логин уже используется. Попробуйте другой."));
     }
 
     @Test
@@ -97,6 +97,6 @@ public class TestCreateCourier extends BaseTest {
         steps.create(secondCourierLogin)
                 .then()
                 .statusCode(SC_CONFLICT)
-                .body("message", equalTo("Этот логин уже используется"));
+                .body("message", equalTo("Этот логин уже используется. Попробуйте другой."));
     }
 }

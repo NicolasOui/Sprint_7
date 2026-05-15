@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0337e5aa-66c2-4b68-a216-212e452c3c4c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/praktikum/scooter/api/Endpoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/praktikum/scooter/api/Endpoints.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/1c830d6d-678f-4c38-af07-14f2f0341ebc-attachment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/28264353-990e-4b9e-b2cf-aa222f967c6c-attachment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/37c04753-d834-443d-b17e-00a95b44b01e-attachment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/47afd416-b9fb-484e-b17f-988e55b79ef4-attachment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/4fa16878-63c5-497a-add6-fad6f7629695-attachment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/55dc8b00-01a9-4a06-9667-de1e61cbcd58-attachment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/6aa5a2c5-e0c8-4ea0-8cce-feb299ce31c6-attachment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/6b794e49-93f2-4c75-8d41-cf1b798bed03-attachment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/7f3edf24-3bc3-4e98-b1e2-f0409057a91b-attachment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/8a97bb66-4e6d-4018-a23f-829ae03730d3-attachment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/8dbf5c89-4afa-4b70-98c8-59cc91acbdfd-attachment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/a3ea40f8-ac94-4c0c-b0b2-c1b91442370f-attachment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/b27af1e2-5130-40ba-954c-1c80a14c9741-attachment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/b8b4c8c3-fcb9-4dd5-b3e8-f1f6adddc5d0-attachment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/c2ac0e9c-8027-41e5-bc60-7edea2920bc1-attachment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/e4cdd557-4d5e-4fd6-bbef-ee19611ac975-attachment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/ea9e4fee-bc8a-42c7-b305-e41e9bb95955-attachment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/f371e7be-0e2e-4d5f-9671-907bb9187a0c-attachment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/f5def9a6-02e7-49ce-b79b-20abcc9906d9-attachment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/f718c920-9511-478b-aae7-5991ad61fa52-attachment.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;NicolasOui&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/NicolasOui/Sprint_7.git&quot;,
+    &quot;accountId&quot;: &quot;777fd6eb-baac-413b-b46d-58be970bb822&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="3Da9Qf6pHIbI1a8L1DlllbRTKMR" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.TestCreateCourier.cannotCreateDoubleCourier (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestCreateCourier.cannotCreateDoubleCourier.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestCreateCourier.createCourierTestReponseOk.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestCreateCourier.createCourierWithAllFields.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestCreateCourier.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestListOfOrders.testBodyHasListOfOrders.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.java in Sprint_7.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.my-rest-api-tests [test].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#1 on develop&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/VAR/IdeaProjects/Sprint_7/src/test/java/ru/praktikum/scooter/tests&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/VAR/IdeaProjects/Sprint_7/pom.xml&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ru.praktikum.scooter.tests" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TestCreateCourier.createCourierTestReponseOk">
+    <configuration name="TestCreateCourier.cannotCreateDoubleCourier" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="my-rest-api-tests" />
+      <option name="PACKAGE_NAME" value="ru.praktikum.scooter.tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.praktikum.scooter.tests.TestCreateCourier" />
+      <option name="METHOD_NAME" value="cannotCreateDoubleCourier" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCreateCourier.cannotCreateDoubleCourier" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="my-rest-api-tests" />
+      <option name="PACKAGE_NAME" value="ru.praktikum.scooter.tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.praktikum.scooter.tests.TestCreateCourier" />
+      <option name="METHOD_NAME" value="cannotCreateDoubleCourier" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCreateCourier.createCourierTestReponseOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="my-rest-api-tests" />
+      <option name="PACKAGE_NAME" value="ru.praktikum.scooter.tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.praktikum.scooter.tests.TestCreateCourier" />
+      <option name="METHOD_NAME" value="createCourierTestReponseOk" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCreateCourier.createCourierWithAllFields" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="my-rest-api-tests" />
+      <option name="PACKAGE_NAME" value="ru.praktikum.scooter.tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.praktikum.scooter.tests.TestCreateCourier" />
+      <option name="METHOD_NAME" value="createCourierWithAllFields" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestListOfOrders.testBodyHasListOfOrders" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="my-rest-api-tests" />
+      <option name="PACKAGE_NAME" value="ru.praktikum.scooter.tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.praktikum.scooter.tests.TestListOfOrders" />
+      <option name="METHOD_NAME" value="testBodyHasListOfOrders" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestCreateCourier.createCourierTestReponseOk" />
+        <item itemvalue="JUnit.TestCreateCourier.createCourierWithAllFields" />
+        <item itemvalue="JUnit.TestListOfOrders.testBodyHasListOfOrders" />
+        <item itemvalue="JUnit.TestCreateCourier.cannotCreateDoubleCourier" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0337e5aa-66c2-4b68-a216-212e452c3c4c" name="Changes" comment="" />
+      <created>1778509304197</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1778509304197</updated>
+    </task>
+    <servers />
+  </component>
+</project>
