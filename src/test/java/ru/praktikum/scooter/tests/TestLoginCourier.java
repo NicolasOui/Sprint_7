@@ -1,184 +1,90 @@
 package ru.praktikum.scooter.tests;
 
+import org.junit.Before;
 import org.junit.Test;
 import ru.praktikum.scooter.api.CourierSteps;
 import ru.praktikum.scooter.model.CreateCourier;
 import ru.praktikum.scooter.model.LoginCourier;
-
+import static org.apache.http.HttpStatus.*;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.Matchers.equalTo;
 
 public class TestLoginCourier extends BaseTest {
 
     private final CourierSteps steps = new CourierSteps();
+    private final String currentLogin = "ninja_auth_login_main";
+    private final String currentPassword = "password123";
 
-    @Test
-    @io.qameta.allure.junit4.DisplayName("Логин курьера")
-    @io.qameta.allure.Description("Код 200, успешная авторизация курьера")
-    public void courierAutorisationReturns200() {
-        String currentLogin = "ninja_login_test_777";
-        CreateCourier newCourier = new CreateCourier( currentLogin, "1234", "Satoru");
+    @Before
+    public void createCourierBeforeTest() {
+        CreateCourier newCourier = new CreateCourier(currentLogin, currentPassword, "Satoru");
         steps.create(newCourier);
-
-        LoginCourier courier = new LoginCourier( currentLogin, "1234");
-        courierId = steps.login(courier)
-                .then()
-                .statusCode(200)
-                .extract()
-                .jsonPath()
-                .getInt("id");
+        courierForDelete = newCourier;
     }
 
     @Test
     @io.qameta.allure.junit4.DisplayName("Логин курьера")
-    @io.qameta.allure.Description("Успешная авторизация курьера возвращает ID")
-    public void courierAutorisationReturnsID() {
-        String currentLogin = "ninja_id_test_888";
-        CreateCourier newCourier = new CreateCourier(currentLogin, "1234", "Satoru");
-        steps.create(newCourier);
-
-        LoginCourier courier = new LoginCourier(currentLogin, "1234");
-        courierId = steps.login(courier)
-                .then()
-                .body("id", notNullValue())
-                .extract()
-                .jsonPath()
-                .getInt("id");
-    }
-
-    @Test
-    @io.qameta.allure.junit4.DisplayName("Логин курьера")
-    @io.qameta.allure.Description("Ошибка 400, если не заполнен логин при авторизации")
-    public void courierAutorisationWithoutLoginReturns400() {
-        String currentLogin = "ninja_no_login_auth_777";
-        CreateCourier newCourier = new CreateCourier(currentLogin, "1234", "Satoru");
-        steps.create(newCourier);
-
-        LoginCourier validCourier = new LoginCourier(currentLogin, "1234");
-        courierId = steps.login(validCourier)
-                .then()
-                .extract()
-                .jsonPath()
-                .getInt("id");
-
-        LoginCourier courierWithoutLogin = new LoginCourier("", "1234");
-        steps.login(courierWithoutLogin)
-                .then()
-                .statusCode(400);
-    }
-
-    @Test
-    @io.qameta.allure.junit4.DisplayName("Логин курьера")
-    @io.qameta.allure.Description("Ошибка 409, если логин при авторизации указан неверно")
-    public void courierAutorisationLoginFailedReturns404() {
-        String currentLogin = "ninja_wrong_login_777";
-        CreateCourier newCourier = new CreateCourier(currentLogin, "1234", "Satoru");
-        steps.create(newCourier);
-
-        LoginCourier validCourier = new LoginCourier(currentLogin, "1234");
-        courierId = steps.login(validCourier)
-                .then()
-                .extract()
-                .jsonPath()
-                .getInt("id");
-
-        LoginCourier courierWithWrongLogin = new LoginCourier("ninja_77", "1234");
-        steps.login(courierWithWrongLogin)
-                .then()
-                .statusCode(404);
-    }
-
-    @Test
-    @io.qameta.allure.junit4.DisplayName("Логин курьера")
-    @io.qameta.allure.Description("Ошибка 404, при попытке авторизоваться без регистрации")
-    public void courierAutorisaionWithoutAutorisationBeforeReturns404() {
-        LoginCourier courier = new LoginCourier("chugasweet", "1234");
+    @io.qameta.allure.Description("Успешная авторизация курьера возвращает код 200 и ID курьера")
+    public void courierAutorisationSuccessAndReturnsID() {
+        LoginCourier courier = new LoginCourier(currentLogin, currentPassword);
         steps.login(courier)
                 .then()
-                .statusCode(404);
+                .statusCode(SC_OK)
+                .body("id", notNullValue());
     }
 
     @Test
     @io.qameta.allure.junit4.DisplayName("Логин курьера")
-    @io.qameta.allure.Description("Проверка уведомления об ошибке, если не заполнен логин при авторизации")
-    public void courierAutorisationWithoutLoginErrorMessage() {
-        String currentLogin = "ninja_no_login_msg_777";
-        CreateCourier newCourier = new CreateCourier(currentLogin, "1234", "Satoru");
-        steps.create(newCourier);
-
-        LoginCourier validCourier = new LoginCourier(currentLogin, "1234");
-        courierId = steps.login(validCourier)
-                .then()
-                .extract()
-                .jsonPath()
-                .getInt("id");
-
-        LoginCourier courierWithoutLogin = new LoginCourier("", "1234");
+    @io.qameta.allure.Description("Ошибка 400 и проверка сообщения, если не заполнен логин при авторизации")
+    public void courierAutorisationWithoutLoginReturns400() {
+        LoginCourier courierWithoutLogin = new LoginCourier("", currentPassword);
         steps.login(courierWithoutLogin)
                 .then()
+                .statusCode(SC_BAD_REQUEST)
                 .body("message", equalTo("Недостаточно данных для входа"));
     }
 
     @Test
     @io.qameta.allure.junit4.DisplayName("Логин курьера")
-    @io.qameta.allure.Description("Ошибка 400, если не заполнен пароль при авторизации")
-    public void courierAutorisationWithoutPasswordReturns400() {
-        String currentLogin = "ninja_no_password_auth_777";
-        CreateCourier newCourier = new CreateCourier(currentLogin, "1234", "Satoru");
-        steps.create(newCourier);
-
-        LoginCourier validCourier = new LoginCourier(currentLogin, "1234");
-        courierId = steps.login(validCourier)
+    @io.qameta.allure.Description("Ошибка 404, если логин при авторизации указан неверно")
+    public void courierAutorisationLoginFailedReturns404() {
+        LoginCourier courierWithWrongLogin = new LoginCourier("completely_wrong_login_ninja", currentPassword);
+        steps.login(courierWithWrongLogin)
                 .then()
-                .extract()
-                .jsonPath()
-                .getInt("id");
-
-        LoginCourier courierWithoutPassword = new LoginCourier(currentLogin, null);
-        steps.login(courierWithoutPassword)
-                .then()
-                .statusCode(400);
+                .statusCode(SC_NOT_FOUND)
+                .body("message", equalTo("Учетная запись не найдена"));
     }
 
     @Test
     @io.qameta.allure.junit4.DisplayName("Логин курьера")
     @io.qameta.allure.Description("Ошибка 404, если пароль при авторизации указан неверно")
     public void courierAutorisationPasswordFailedReturns404() {
-        String currentLogin = "ninja_wrong_password_777";
-        CreateCourier newCourier = new CreateCourier(currentLogin, "1234", "Satoru");
-        steps.create(newCourier);
-
-        LoginCourier validCourier = new LoginCourier(currentLogin, "1234");
-        courierId = steps.login(validCourier)
-                .then()
-                .extract()
-                .jsonPath()
-                .getInt("id");
-
-        LoginCourier courierWithWrongPassword = new LoginCourier(currentLogin, "12345");
+        LoginCourier courierWithWrongPassword = new LoginCourier(currentLogin, "wrong_pass_999");
         steps.login(courierWithWrongPassword)
                 .then()
-                .statusCode(404);
+                .statusCode(SC_NOT_FOUND)
+                .body("message", equalTo("Учетная запись не найдена"));
     }
 
     @Test
     @io.qameta.allure.junit4.DisplayName("Логин курьера")
-    @io.qameta.allure.Description("Проверка уведомления об ошибке, если не заполнен пароль при авторизации")
-    public void courierAutorisationWithoutPasswordErrorMesage() {
-        String currentLogin = "ninja_no_pass_msg_777";
-        CreateCourier newCourier = new CreateCourier(currentLogin, "1234", "Satoru");
-        steps.create(newCourier);
-
-        LoginCourier validCourier = new LoginCourier(currentLogin, "1234");
-        courierId = steps.login(validCourier)
+    @io.qameta.allure.Description("Ошибка 400 и проверка сообщения, если не заполнен пароль при авторизации")
+    public void courierAutorisationWithoutPasswordReturns400() {
+        LoginCourier courierWithoutPassword = new LoginCourier(currentLogin, "");
+        steps.login(courierWithoutPassword)
                 .then()
-                .extract()
-                .jsonPath()
-                .getInt("id");
-
-        LoginCourier ourierWithoutPassword = new LoginCourier(currentLogin, "");
-        steps.login(ourierWithoutPassword)
-                .then()
+                .statusCode(SC_BAD_REQUEST)
                 .body("message", equalTo("Недостаточно данных для входа"));
+    }
+
+    @Test
+    @io.qameta.allure.junit4.DisplayName("Логин курьера")
+    @io.qameta.allure.Description("Ошибка 404 при попытке авторизоваться без регистрации")
+    public void courierAutorisaionWithoutRegistrationReturns404() {
+        LoginCourier courier = new LoginCourier("unregistered_ninja_exclusive", "1234");
+        steps.login(courier)
+                .then()
+                .statusCode(SC_NOT_FOUND)
+                .body("message", equalTo("Учетная запись не найдена"));
     }
 }
