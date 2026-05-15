@@ -3,18 +3,19 @@ package ru.praktikum.scooter.tests;
 import org.junit.Test;
 import ru.praktikum.scooter.api.OrderSteps;
 import ru.praktikum.scooter.model.CreateOrder;
-
 import java.util.List;
+import static org.apache.http.HttpStatus.SC_CREATED;
+import static org.apache.http.HttpStatus.SC_OK;
 import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.greaterThan;
 
 public class TestListOfOrders extends BaseTest {
 
     private final OrderSteps orderSteps = new OrderSteps();
 
     @Test
-    @io.qameta.allure.junit4.DisplayName("Список заказа")
-    @io.qameta.allure.Description("Тело ответа возвращает список заказа")
+    @io.qameta.allure.junit4.DisplayName("Список заказов")
+    @io.qameta.allure.Description("Тело ответа возвращает список заказов, код ответа 200")
     public void testBodyHasListOfOrders() {
 
         CreateOrder order = new CreateOrder(
@@ -24,19 +25,14 @@ public class TestListOfOrders extends BaseTest {
 
         orderTrack = orderSteps.create(order)
                 .then()
-                .statusCode(201)
+                .statusCode(SC_CREATED)
                 .extract()
                 .path("track");
 
-           orderSteps
-                .getOrders()
+        orderSteps.getOrders()
                 .then()
-                .assertThat()
-                .statusCode(200)
+                .statusCode(SC_OK)
                 .body("orders", notNullValue())
                 .body("orders.size()", greaterThan(0));
-
     }
 }
-
-
