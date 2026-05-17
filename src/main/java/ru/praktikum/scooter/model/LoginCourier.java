@@ -10,6 +10,9 @@ public class LoginCourier {
         this.password = password;
     }
 
+    public LoginCourier() {
+    }
+
     public String getLogin() {
         return login;
     }
