@@ -21,7 +21,8 @@ public class TestCreateCourier extends BaseTest {
 
         steps.create(courier)
                 .then()
-                .statusCode(SC_CREATED);
+                .statusCode(SC_CREATED)
+                .body("ok", equalTo(true));
     }
 
     @Test
@@ -41,21 +42,6 @@ public class TestCreateCourier extends BaseTest {
                 .then()
                 .statusCode(SC_CONFLICT)
                 .body("message", equalTo("Этот логин уже используется. Попробуйте другой."));
-    }
-
-    @Test
-    @io.qameta.allure.junit4.DisplayName("Создание курьера")
-    @io.qameta.allure.Description("Успешное создание курьера со всеми обязательными полями возвращает код 201 и ok: true")
-    public void createCourierWithAllFieldsAndCheckResponse() {
-        String currentLogin = "ivan_praktikum_99";
-        CreateCourier courier = new CreateCourier(currentLogin, "password123", "Ivan");
-
-        courierForDelete = courier;
-
-        steps.create(courier)
-                .then()
-                .statusCode(SC_CREATED)
-                .body("ok", equalTo(true));
     }
 
     @Test
@@ -93,7 +79,7 @@ public class TestCreateCourier extends BaseTest {
 
         steps.create(courier);
 
-       CreateCourier secondCourierLogin = new CreateCourier(currentLogin, "12534", "Syatoru");
+        CreateCourier secondCourierLogin = new CreateCourier(currentLogin, "12534", "Syatoru");
         steps.create(secondCourierLogin)
                 .then()
                 .statusCode(SC_CONFLICT)
