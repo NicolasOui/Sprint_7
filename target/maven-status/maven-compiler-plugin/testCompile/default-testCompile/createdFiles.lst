@@ -1,9 +1,0 @@
-ru\praktikum\scooter\api\OrderSteps.class
-ru\praktikum\scooter\tests\TestParameterizedCreateOrderDifferentColors.class
-ru\praktikum\scooter\tests\TestLoginCourier.class
-ru\praktikum\scooter\tests\BaseTest.class
-ru\praktikum\scooter\tests\TestCreateOrder.class
-ru\praktikum\scooter\api\CourierSteps.class
-ru\praktikum\scooter\tests\TestListOfOrders.class
-ru\praktikum\scooter\api\Endpoints.class
-ru\praktikum\scooter\tests\TestCreateCourier.class
